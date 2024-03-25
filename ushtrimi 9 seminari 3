@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int numericGrade;
+    printf("Jepni noten ne forme numerike: ");
+    scanf("%d", &numericGrade);
+
+    // Calculate the tens digit of the grade
+    int tensDigit = numericGrade / 10;
+
+    printf("Nota me shkronje: ");
+    switch(tensDigit) {
+        case 10:
+        case 9:
+            printf("A\n");  // Grade is A for 90-100
+            break;
+        case 8:
+            printf("B\n");  // Grade is B for 80-89
+            break;
+        case 7:
+            printf("C\n");  // Grade is C for 70-79
+            break;
+        case 6:
+            printf("D\n");  // Grade is D for 60-69
+            break;
+        default:
+            printf("F\n");  // Grade is F for below 60
+            break;
+    }
+
+    system("pause");
+    return 0;
+}
